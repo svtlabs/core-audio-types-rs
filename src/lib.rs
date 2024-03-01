@@ -1,14 +1,3 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+pub mod audio_stream_basic_description;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub mod audio_stream_packet_description;
