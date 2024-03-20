@@ -1,3 +1,4 @@
+#![allow(non_snake_case)]
 pub type AudioFormatFlags = u32;
 pub type AudioFormatID = u32;
 

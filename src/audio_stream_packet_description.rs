@@ -1,3 +1,4 @@
+#![allow(non_snake_case)]
 #[repr(C)]
 pub struct AudioStreamPacketDescription {
     pub mStartOffset: u64,
@@ -11,16 +12,6 @@ impl AudioStreamPacketDescription {
             mStartOffset,
             mVariableFramesInPacket,
             mDataByteSize,
-        }
-    }
-}
-
-impl Default for AudioStreamPacketDescription {
-    fn default() -> Self {
-        Self {
-            mStartOffset: 0,
-            mVariableFramesInPacket: 0,
-            mDataByteSize: 0,
         }
     }
 }
