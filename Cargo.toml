@@ -1,6 +1,7 @@
 [package]
 name = "core-audio-types-rs"
 description = "Rust wrapper for apple's CoreAudioTypes framework"
+keywords = ["screencapture", "screencapturekit", "macos"]
 categories = [
   "external-ffi-bindings",
   "multimedia",
@@ -10,13 +11,12 @@ categories = [
 authors = ["Per Johansson <mail@perjohansson.net>"]
 repository = "https://github.com/svtlabs/core-audio-types-rs"
 homepage = "https://github.com/svtlabs"
-rust-version = "1.72"
 license = "MIT OR Apache-2.0"
 
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-core-foundation = "0.9"
+core-foundation = "0.10"
