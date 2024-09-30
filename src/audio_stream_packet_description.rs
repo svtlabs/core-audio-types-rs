@@ -1,17 +1,17 @@
-#![allow(non_snake_case)]
 #[repr(C)]
+#[derive(Debug, Clone, Copy)]
 pub struct AudioStreamPacketDescription {
-    pub mStartOffset: u64,
-    pub mVariableFramesInPacket: u32,
-    pub mDataByteSize: u32,
+    pub start_offset: u64,
+    pub variable_frames_in_packet: u32,
+    pub data_byte_size: u32,
 }
 
 impl AudioStreamPacketDescription {
-    pub fn new(mStartOffset: u64, mVariableFramesInPacket: u32, mDataByteSize: u32) -> Self {
+    pub fn new(start_offset: u64, variable_frames_in_packet: u32, data_byte_size: u32) -> Self {
         Self {
-            mStartOffset,
-            mVariableFramesInPacket,
-            mDataByteSize,
+            start_offset,
+            variable_frames_in_packet,
+            data_byte_size,
         }
     }
 }
