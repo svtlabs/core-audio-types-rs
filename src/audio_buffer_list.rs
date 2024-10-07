@@ -1,17 +1,11 @@
 use crate::audio_buffer::AudioBuffer;
+const MAX_AUDIO_BUFFERS: usize = 8;
 
 #[repr(C)]
 #[derive(Debug, Clone, Copy)]
-pub struct AudioBufferList<'a> {
+pub struct AudioBufferList {
     pub number_buffers: u32,
-    pub buffers: &'a [AudioBuffer],
+    pub buffers: [AudioBuffer; MAX_AUDIO_BUFFERS],
 }
 
-impl<'a> AudioBufferList<'a> {
-    pub fn new(number_buffers: u32, buffers: &'a [AudioBuffer]) -> Self {
-        Self {
-            number_buffers,
-            buffers,
-        }
-    }
-}
+
